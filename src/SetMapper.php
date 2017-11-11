@@ -101,7 +101,7 @@ class SetMapper
        $lft = $this->bound;
        if (isset($subArray['children'])) {
          $returnSubSubArray = $this->flattenNestable($subArray['children'], $subArray['id'], ($depth  1));
-         $rgt = $this->bound  1;
+         $rgt = $this->bound;
          $this->bound;
        } else {
          $rgt = $this->bound;
