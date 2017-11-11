@@ -600,7 +600,7 @@ abstract class Node extends \Baum\Extensions\Eloquent\Model
      */
     public function scopeWithoutNode(Builder $query, Node $node)
     {
-        return $query->where($node->getKeyName(), '!=', $node->getKey());
+		return $query->where($node->getTable() . '.' . $node->getKeyName(), '!=', $node->getKey());
     }
 
     /**
@@ -1305,6 +1305,9 @@ abstract class Node extends \Baum\Extensions\Eloquent\Model
         $this->getConnection()->transaction(function () use ($self) {
             $self->reload();
             $level = $self->getLevel();
+			if ($level == $self->getOriginal($self->getDepthColumnName())) {
+				return;
+			}
             $self->newNestedSetQuery()
                 ->where($self->getKeyName(), $self->getKey())
                 ->update([$self->getDepthColumnName() => $level]);
