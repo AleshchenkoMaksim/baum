@@ -1,5 +1,5 @@
 {
-  "name": "sithira/baum",
+  "name": "hungnm144/baum",
   "type": "library",
   "description": "Baum is an implementation of the Nested Set pattern for Eloquent models.",
   "keywords": ["nested set", "laravel", "laravel 5", "eloquent", "database"],
@@ -20,6 +20,11 @@
       "email": "mse@dogado.de",
       "homepage": "https://www.dogado.de"
     },
+	{
+      "name": "Hung Nguyen",
+      "email": "hungnm144@gmail.com",
+      "homepage": "http://github.com/hungnm144"
+    }
     {
       "name": "Sithira Munasinghe",
       "email": "sithiraac@gmail.com",
